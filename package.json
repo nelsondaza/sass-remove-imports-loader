@@ -1,0 +1,55 @@
+{
+  "name": "sass-remove-imports-loader",
+  "version": "1.0.0",
+  "description": "SASS loader for Webpack that removes imports",
+  "main": "lib/loader.js",
+  "scripts": {
+    "start": "npm run lint && npm run clean && npm run dev",
+    "dev": "scripts/dev",
+    "build": "scripts/build",
+    "lint": "scripts/lint",
+    "test": "jest",
+    "test:w": "jest --watchAll",
+    "clean": "scripts/clean",
+    "prerelease": "npm run clean && npm run build && npm run test && npm run lint",
+    "preversion": "npm run prerelease",
+    "prepublish": "npm run prerelease",
+    "release:patch": "scripts/release patch",
+    "release:minor": "scripts/release minor",
+    "release:major": "scripts/release major"
+  },
+  "authors": [
+    "Nelson Daza <nelson.daza@gmail.com> (https://github.com/nelsondaza)"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nelsondaza/sass-remove-imports-loader.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nelsondaza/sass-remove-imports-loader/issues"
+  },
+  "keywords": [
+    "css",
+    "sass",
+    "import",
+    "webpack"
+  ],
+  "dependencies": {
+    "async": "^2.1.4",
+    "chalk": "^1.1.3",
+    "glob": "^7.1.4",
+    "loader-utils": "^1.2.3"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.5.0",
+    "@babel/core": "^7.5.4",
+    "@babel/preset-env": "^7.5.4",
+    "eslint": "^6.0.1",
+    "jest": "^24.8.0",
+    "raw-loader": "^0.5.1",
+    "sass-resources-loader": "^2.0.1",
+    "webpack": "2.2.0",
+    "webpack-merge": "^4.2.1"
+  }
+}

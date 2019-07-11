@@ -1,0 +1,19 @@
+---
+
+globals:
+  __DEBUG__: true
+
+env:
+  es6: true
+  jest: true
+
+parserOptions:
+  ecmaFeatures:
+    restParams: true
+    modules: true
+  ecmaVersion: 6
+  sourceType: module
+
+rules:
+  comma-dangle: off
+
